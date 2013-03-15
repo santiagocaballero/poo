@@ -1,0 +1,25 @@
+class nomina { 
+public static void pago(double basico, int horas) { 
+if (basico < 8.0) {
+System.out.println("Debe pagar al menos 8 horas");
+} else if (horas > 60) {
+System.out.println("No puede trabajar mas de 60 horas semanales");
+} else {
+
+int basicopagar = 0;
+
+if (horas > 40) {
+
+basicopagar = horas - 40;  
+horas = 40; 
+}
+double pago = basico * horas;
+pago += basicopagar * basico * 1.5;
+System.out.println("se le paga el empleado $" + pago); 
+}
+} 
+public static void main(String[] arguments) { 
+pago(5.0, 59);
+ 
+}
+}
